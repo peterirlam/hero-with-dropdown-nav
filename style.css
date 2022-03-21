@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+  color: #444;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/* Nice CSS 'trick' uses a linear-gradient which uses a transition between the SAME color values to create 
+a light gray overlay. The background-image property stacks the overlay and the yoga image  */
+header {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(namaste-yoga.png);
+  background-size: cover;
+  color: #fff;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 32px 48px;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 16px;
+  color: white;
+  transition: 0.2s ease-out;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+li a:hover,
+.dropdown:hover {
+  color: #dbe4ff;
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: #dbe4ff;
+}
